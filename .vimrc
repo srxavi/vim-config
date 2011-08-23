@@ -17,16 +17,13 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 
 " Vim UI
-syntax enable
-set background=dark
-colorscheme solarized
+syntax on
+set bg=dark
 set showmode
 set nu
 set hlsearch
 set winminheight=0
 set cursorline
-hi cursorline guibg=#333333
-hi cursorcolumn guibg=#333333
 if has('cmdline_info')
 	set ruler                  	" show the ruler
 	set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
@@ -41,6 +38,10 @@ endif
 
 " GVim
 if has('gui_running')
+    hi cursorline guibg=#333333
+    hi cursorcolumn guibg=#333333
+    set background=dark
+    colorscheme solarized
     set guioptions-=T
     set guioptions-=r
     set guioptions-=L
