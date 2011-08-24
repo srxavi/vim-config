@@ -49,6 +49,17 @@ if has('gui_running')
     set columns=120
 endif
 
+" Status line hawtness
+if has('statusline')
+    set laststatus=2
+    set statusline=%<%f\    " Filename
+    set statusline+=%w%h%m%r " Options
+    set statusline+=%{fugitive#statusline()} "  Git Hotness
+    set statusline+=\ [%{&ff}/%Y]            " filetype
+    set statusline+=\ [%{getcwd()}]          " current dir
+    set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info 
+endif
+
 " Formatting
 set nowrap
 set autoindent
@@ -64,7 +75,7 @@ let mapleader = ','
 " NerdTree
 map <silent> <C-e> :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-let NERDTreeChDirMode=0
+let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=0
 let NERDTreeKeepTreeInNewTab=1
