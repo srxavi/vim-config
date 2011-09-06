@@ -18,7 +18,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 " Vim UI
 syntax on
-set bg=dark
+" set bg=dark
 set showmode
 set nu
 set hlsearch
