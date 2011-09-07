@@ -84,5 +84,8 @@ let NERDTreeKeepTreeInNewTab=1
 let g:pydiction_location='$HOME/.vim/bundle/Pydiction/complete-dict'
 
 " SuperTab
+let g:SuperTabMappingForward = '<c-space>'
+let g:SuperTabMappingBackward = '<s-c-space>'
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabCrMapping = 0
